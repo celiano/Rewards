@@ -1,0 +1,30 @@
+doctype html
+html(lang='en', ng-app='myApp')
+  head
+    meta(charset='utf-8', name='viewport', content='width=device-width, initial-scale=1.0')
+    title Accounting
+    link(rel='stylesheet', type='text/css', href='styles/app.css')
+    script(src='scripts/angular.min.js')
+    script(src='scripts/angular-route.js')
+    script(src='js/main.js')
+  body(ng-controller='mainController')
+    .header
+      ul.top
+        li
+          a(href='#/documentos') Salir
+        li
+          a(href='#Admin') Admin
+        li
+          a(href='#Contacto') Contactanos
+    modal-login(show='modalShown', width='50', height='50', modal-user='user', save-user='saveUser(user)', template-user='views/login.html')
+    .menu
+      ul
+        li
+          a(href='#/home') Inicio
+        li
+          a(href='#/cuentas') Cuentas
+        li
+          a(href='#/documentos') Transacciones
+    div
+      #change.main(ng-view='')
+      

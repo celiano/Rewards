@@ -1,0 +1,27 @@
+<div class='ng-modal' ng-if='show'>
+  <div class='ng-modal-overlay'></div>
+  <div class='ng-modal-dialog' ng-if='show' ng-style='dialogStyle'>
+    <!--<div class='ng-modal-close' ng-click='hideModal()'>X</div>-->
+    <div class='ng-modal-dialog-content'>
+      <p>Some text in the Modal..</p>
+      <div>
+       <form ng-submit='logear(loginData)'>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" ng-model='loginData.usuario'>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" ng-model='loginData.password'>
+
+        <label for="country">State</label>
+        <select id="country" ng-model='loginData.country' value="CO">
+         <option value="CO">Colombia</option>
+         <option value="USA">Estados Unidos</option>
+         <option value="Mx">Mexico</option>
+        </select>
+
+        <input type="submit" value="Submit">
+       </form>
+      </div>   
+    </div>
+  </div>
+</div>

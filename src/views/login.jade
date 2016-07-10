@@ -1,0 +1,19 @@
+html
+  body
+    .ng-modal(ng-if='show')
+      .ng-modal-overlay
+      .ng-modal-dialog(ng-if='show', ng-style='dialogStyle')
+        .ng-modal-dialog-content
+          p Some text in the Modal..
+          div
+            form(ng-submit='logear(loginData)')
+              label(for='fname') First Name
+              input#fname(type='text', ng-model='loginData.usuario')
+              label(for='lname') Last Name
+              input#lname(type='text', ng-model='loginData.password')
+              label(for='country') State
+              select#country(ng-model='loginData.country', value='CO')
+                option(value='CO') Colombia
+                option(value='USA') Estados Unidos
+                option(value='Mx') Mexico
+              input(type='submit', value='Submit')
