@@ -15,7 +15,7 @@ app.controller('userController', ['$scope', 'User', function($scope, User) {
     logearRequest.success(function (data, status, header, config) {
       console.log("data.succeded = true");
       console.log(data);
-      if (data.succeded == true && data.data != null) {
+      if (data.Succeeded == true && data.Data != null) {
         $scope.show = false;
       }       
     })
